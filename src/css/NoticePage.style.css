@@ -1,0 +1,47 @@
+.notice .button-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.notice .edit-button {
+  background-color: #465D7F;
+}
+
+.notice .k-state-disabled .edit-button {
+  background-color: #777;
+  color: white;
+}
+
+.notice .write-button {
+  background-color: #465D7F !important;
+  margin-left: 15px;
+}
+
+.notice .button-text {
+  margin-left: 10px;
+}
+
+.notice a {
+  text-decoration: none;
+}
+
+.notice .k-grid td.ta-c {
+  text-align: center;
+}
+
+.notice .k-link {
+  font-size: 15px;
+  padding: 10px 24px !important;
+}
+
+.notice .k-editable-area body {
+  font-size: 15px !important;
+}
+
+.notice .k-grid tr.k-master-row:hover {
+  background-color: rgba(68, 170, 218, 0.3);
+}
+
+.notice .k-grid tr.k-detail-row:hover {
+  background-color: unset;
+}

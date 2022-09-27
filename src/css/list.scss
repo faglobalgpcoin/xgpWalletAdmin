@@ -1,0 +1,98 @@
+.list-block {
+	.dropdown-container {
+		position: absolute;
+		right: 50px;
+		background-color: white;
+		border-radius: 25px;
+		padding: 0px;
+		padding-left: 20px;
+		padding-right: 15px;
+		box-shadow: 0 2px 15px 0 rgba(131, 131, 131, 0.1);
+		width: 160px;
+	}
+
+	.k-dropdown {
+		width: 160px;
+		background-color: white;
+		border-radius: 25px;
+		padding: 3px 0px;
+
+		.k-dropdown-wrap {
+			border: 0px;
+		}
+	}
+
+	.k-grid {
+		@extend .light-shadow-box;
+		border: 0px;
+
+		.absolute-message {
+			position: absolute;
+			margin-top: -13px;
+			color: gray;
+		}
+
+		.product-serial {
+			text-decoration: underline;
+			cursor: pointer;
+			font-size: 16px;
+		}
+
+		.grid-button {
+			padding: 0px 15px;
+			font-size: 15px;
+		}
+
+		.locked-left {
+			position: sticky;
+			left: 0;
+			border-right-width: 1px;
+		}
+
+		.locked-right {
+			display: flex;
+			position: sticky;
+			right: 0;
+			justify-content: center;
+		}
+
+		.stored-data {
+			@at-root tr#{&} {
+				background-color: yellow;
+			}
+		}
+	}
+}
+
+.k-popup,
+.k-list-scroller,
+.k-child-animation-container {
+	box-shadow: 0px 7px 6px rgba(131, 131, 131, 0.1) !important;
+}
+
+.k-grid td.k-state-selected,
+.k-grid tr.k-state-selected {
+	// background-color: #ecedf3 !important;
+
+	// .k-grid-content-sticky {
+	//   // background-color: #ecedf3 !important;
+	// }
+}
+
+.k-grid-content tr:last-child td,
+.k-grid-content-locked tr:last-child td {
+	border-bottom-width: 1px !important;
+}
+
+.k-animation-container {
+	box-shadow: none !important;
+}
+
+.dropdown-item {
+	color: rgb(80, 80, 80);
+
+	.k-state-selected & {
+		font-weight: bold;
+		color: black;
+	}
+}

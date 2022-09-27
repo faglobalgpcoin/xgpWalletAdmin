@@ -1,0 +1,191 @@
+// style.scss
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Gelasio&display=swap");
+@import "mixin.scss";
+@import "property.scss";
+@import "keyframes.scss";
+@import "login.scss";
+@import "register.scss";
+@import "list.scss";
+@import "components.scss";
+@import "adminset.scss";
+@import "usercustom.scss";
+
+html,
+body,
+#root {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: NotoSansCJKkr;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+a {
+	transition: 0.3s;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+*:focus {
+	outline: none;
+}
+
+button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+/* header, header title 스타일*/
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.content {
+	background-color: #f7f7f7;
+	display: block;
+	position: absolute;
+	height: auto;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 40px;
+	padding-top: 0px;
+	@include res(mobile) {
+		padding: 5%;
+		margin-top: 51px;
+		overflow: auto;
+	}
+}
+
+.scroll-content {
+	background-color: #f7f7f7;
+
+	.padding-container {
+		padding: 40px;
+		padding-top: 0px;
+	}
+
+	&.padding-container {
+		padding: 40px;
+		padding-top: 0px;
+	}
+}
+
+.content-title {
+	display: flex;
+	align-items: center;
+	font-size: 25px;
+	font-weight: 800;
+	font-family: "IBM Plex Sans";
+	margin: 0px;
+	margin-bottom: 20px;
+	color: black;
+	padding-left: 5px;
+
+	@include res(mobile) {
+		font-size: 20px;
+		flex-wrap: wrap;
+		height: auto !important;
+		.title-util-tab {
+			width: 100%;
+			margin-top: 10px;
+			display: flex;
+			justify-content: space-between;
+			span {
+				margin-right: 10px;
+				svg {
+					margin-right: 2px !important;
+				}
+				button {
+					margin-left: 0 !important;
+					padding: 3px 5px;
+					font-size: 12px;
+				}
+			}
+			.search-form {
+				width: auto;
+				height: 27px;
+				padding: 3px 30px 3px 10px;
+				&::placeholder {
+					font-size: 12px;
+				}
+			}
+			button {
+				margin-left: 0 !important;
+			}
+		}
+	}
+	.title-util-tab {
+		.period-area {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			margin: 0 10px;
+			p {
+				margin: 0;
+				&.label-title {
+					font-size: 11.5px;
+					font-weight: normal;
+					line-height: 1;
+					padding: 0 10px;
+				}
+				&.line {
+					margin: 0 10px;
+				}
+			}
+			input {
+				box-shadow: 0 2px 15px 0 rgba(131, 131, 131, 0.1);
+				border: none;
+				padding: 4px 20px;
+				border-radius: 30px;
+			}
+		}
+		.search-area {
+			position: relative;
+			button {
+				@include res(mobile) {
+					top: 8px !important;
+					right: -5px !important;
+				}
+			}
+		}
+	}
+
+	&.title-row {
+		justify-content: space-between;
+	}
+}
+
+.k-icon-20 {
+	font-size: 20px !important;
+}
+
+.light-shadow-box {
+	box-shadow: 0px 2px 6px rgba(154, 154, 154, 0.1);
+}
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}

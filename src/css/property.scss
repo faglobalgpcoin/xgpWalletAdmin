@@ -1,0 +1,378 @@
+@import "./_theme.scss";
+
+.half-block {
+	@extend .light-shadow-box;
+	background-color: white;
+	display: flex;
+	flex: 2;
+	padding: 30px 20px;
+	flex-direction: column;
+}
+
+.locked-right {
+	display: flex;
+	position: sticky;
+	right: 0;
+	justify-content: center;
+}
+
+.switch-container {
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding: 25px 35px;
+}
+
+.add-container {
+	.caution-wrapper {
+		padding: 15px;
+		width: 100%;
+		// border:1px solid $color-primary--light;
+		background-color: #edf9f4;
+		color: #474747;
+
+		span {
+			margin-right: 10px;
+		}
+	}
+}
+
+.user-container {
+	.content-buttons {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		@include res(mobile) {
+			flex-wrap: wrap;
+			.search-area {
+				margin: 10px 0 !important;
+				position: relative;
+				width: 100%;
+				.search-form {
+					width: 100%;
+					height: 35px;
+				}
+				.search-button {
+					top: 9px !important;
+					right: 0 !important;
+				}
+			}
+		}
+	}
+
+	.grid-button {
+		margin-right: 15px;
+	}
+
+	.locked-left {
+		position: sticky;
+		left: 0;
+		border-right-width: 1px;
+		text-align: center;
+	}
+
+	hr {
+		border-left: 1px solid lightgray;
+		height: 30px;
+		margin: 0 25px;
+	}
+
+	.all-title {
+		display: flex;
+		font-size: 15px;
+		color: gray;
+		margin-right: 10px;
+		flex-direction: row;
+		align-items: center;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	.all-status {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-left: 10px;
+		// padding: 5px 15px;
+		// background-color: $color-second;
+		border-radius: 15px;
+
+		&.on {
+			color: $color-second;
+		}
+	}
+
+	.filter-wrapper {
+		display: flex;
+		flex-direction: row;
+		@include res(mobile) {
+			width: 100%;
+		}
+
+		.filter-button {
+			padding: 15px 20px;
+			font-weight: 600;
+			color: gray;
+			@include res(mobile) {
+				font-size: 14px;
+				padding: 5px;
+			}
+
+			&.active {
+				border-bottom: 4px solid $color-primary;
+				color: $color-primary--darker;
+				font-weight: 700;
+			}
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.lockup-modal {
+	form {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		width: 100%;
+		align-items: center;
+		justify-content: space-evenly;
+	}
+
+	.input-wrapper {
+		width: 100%;
+		height: 50px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+
+		.switch-wrapper {
+			align-self: center;
+		}
+
+		.input-title {
+			width: 150px;
+			align-self: center;
+			text-align: right;
+			font-size: 15px;
+			font-weight: bold;
+			margin-right: 18px;
+			color: gray;
+		}
+
+		.unit {
+			position: absolute;
+			right: 0;
+			font-size: 19px;
+			color: gray;
+			font-weight: 600;
+			right: 90px;
+		}
+
+		.divider {
+			align-self: center;
+			font-size: 20px;
+			margin: 0 8px;
+		}
+	}
+
+	.input-text {
+		width: 225px;
+		border: 0;
+		border-bottom: 1px solid gray;
+		font-size: 18px;
+		height: 40px;
+		text-align: center;
+
+		&.disabled {
+			background-color: #f1f1f1;
+		}
+
+		&:focus {
+			border-bottom: 1.5px solid #474747;
+		}
+	}
+
+	.input-date {
+		width: 60px;
+		border: 0;
+		border-bottom: 1px solid gray;
+		font-size: 18px;
+		text-align: center;
+		height: 40px;
+
+		&.disabled {
+			background-color: #f1f1f1;
+		}
+
+		&:focus {
+			border-bottom: 1.5px solid #474747;
+		}
+	}
+}
+
+.airdrop-container {
+	.caution-wrapper {
+		width: 100%;
+		padding: 15px;
+		background-color: #edf9f4;
+		color: #474747;
+
+		span {
+			margin-right: 10px;
+			@include res(mobile) {
+				font-size: 14px;
+			}
+		}
+	}
+
+	.link-button:hover {
+		cursor: pointer;
+	}
+
+	.upload-wrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		width: 100%;
+		padding: 15px;
+		// background-color: #f2f2f2;
+		border: 1px dashed lightgray;
+		color: #474747;
+		font-size: 15px;
+		text-align: center;
+
+		label {
+			display: flex;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		.input-tag {
+			/* 파일 필드 숨기기 */
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			padding: 0;
+			margin: -1px;
+			overflow: hidden;
+			clip: rect(0, 0, 0, 0);
+			border: 0;
+		}
+	}
+
+	.text-button {
+		margin-right: 0;
+		font-size: 15px;
+	}
+
+	.form {
+		display: flex;
+		flex-direction: column;
+		margin-top: 5px;
+
+		.row {
+			margin-left: 10%;
+			margin-right: 10%;
+			display: flex;
+			flex-direction: row;
+			margin-bottom: 30px;
+			justify-content: space-between;
+			align-items: center;
+			@include res(mobile) {
+				margin-left: 0;
+				margin-right: 0;
+				flex-wrap: wrap;
+			}
+			&.transfer-individual-title {
+				margin-bottom: 0;
+			}
+			&.transfer-individual {
+				align-items: flex-end;
+			}
+		}
+
+		.last {
+			margin-bottom: 0px;
+		}
+
+		.title {
+			display: flex;
+			font-size: 15px;
+			margin-right: 11px;
+			color: rgb(101, 101, 101);
+			font-weight: 600;
+			font-family: Roboto, "Helvetica Neue", sans-serif;
+			@include res(mobile) {
+				width: 100%;
+				& + div {
+					font-size: 12px;
+				}
+			}
+		}
+
+		.balance {
+			color: black;
+			font-size: 19px;
+			font-weight: 600;
+			@include res(mobile) {
+				font-size: 15px;
+			}
+		}
+
+		hr {
+			margin: 35px 0;
+			margin-left: 10%;
+			width: 80%;
+			border: 0;
+			border-top: 1px solid rgb(237, 237, 237);
+		}
+		h5 {
+			font-size: 15px;
+			padding: 20px 0;
+			border-top: 1px solid rgb(237, 237, 237);
+			border-bottom: 1px solid rgb(237, 237, 237);
+			width: 100%;
+			color: #656565;
+		}
+		.transfer-individual {
+			@include res(mobile) {
+				margin-bottom: 0;
+			}
+			&-input {
+				width: 100%;
+				margin-right: 20px;
+				@include res(mobile) {
+					margin-right: 0;
+				}
+				label {
+					p {
+						font-size: 13px;
+						color: #656565;
+						font-weight: bold;
+					}
+					input {
+						box-sizing: border-box;
+						padding: 10px;
+						border: 1px solid rgb(237, 237, 237);
+						width: 100%;
+					}
+				}
+			}
+			button {
+				margin-right: 0;
+				@include res(mobile) {
+					margin-top: 15px;
+					width: 100%;
+				}
+			}
+		}
+	}
+}

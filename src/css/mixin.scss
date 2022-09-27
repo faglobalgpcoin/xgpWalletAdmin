@@ -1,0 +1,10 @@
+// respons
+$mobile-mode: 640px;
+
+@mixin res($media) {
+	@if $media==mobile {
+		@media only screen and (max-width: $mobile-mode) {
+			@content;
+		}
+	}
+}

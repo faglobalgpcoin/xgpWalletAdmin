@@ -1,0 +1,107 @@
+/* 공통으로 빼는게 좋을지 ? **********************************/
+.post-form .header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.post-form .header-button {
+  display: flex;
+  align-items: center;
+}
+
+.post-form .k-button {
+  background-color: #465d7f;
+}
+
+.post-form .button-text {
+  margin-left: 10px;
+}
+/* 공통으로 빼는게 좋을지 ? **********************************/
+
+.post-form .form {
+  /* height: 600px; */
+  height: 80%;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+/*
+* 제목 스타일
+*/
+
+.post-form .form-title {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+}
+
+.post-form .form-isUsing {
+  margin-left: 10px;
+}
+
+.post-form .form-box {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  margin-bottom: 20px;
+  padding: 15px;
+  margin-left: -1px;
+  margin-right: -1px;
+}
+
+.post-form .k-checkbox-label::after {
+  background-color: #465d7f !important;
+}
+
+.post-form .k-checkbox:checked + .k-checkbox-label::before {
+  background-color: #465d7f !important;
+}
+
+/*
+* 드롭다운(분류) 스타일
+*/
+
+.post-form .form-title .k-dropdown {
+  width: 120px;
+}
+
+.post-form .form-title .k-dropdown-wrap {
+  border-color: rgba(0, 0, 0, 0.12);
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+  padding-right: 15px;
+  width: 120px;
+}
+
+.post-form .form-title .k-dropdown-wrap .k-input {
+  align-self: center;
+  justify-content: center;
+  font-size: 15px;
+}
+
+/*
+* 에디터 스타일
+*/
+
+.post-form .k-editor-toolbar {
+  background-color: #fff;
+}
+
+.post-form .k-textbox {
+  width: 100%;
+  border-color: rgba(0, 0, 0, 0.12);
+  padding: 15px;
+  font-size: 15px;
+  height: 50px;
+}
+
+.post-form table.k-editor {
+  height: calc(100% - 60px);
+  border: none;
+}
+
+.post-form .k-textbox::after {
+  width: 100%;
+}

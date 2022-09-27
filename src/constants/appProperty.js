@@ -1,0 +1,15 @@
+const APP_PROPERTY = {
+  ROUGH_DRAFT: 'ROUGH_DRAFT',
+  ROUGH_STORED: 'ROUGH_STORED',
+  FACETED_DRAFT: 'FACETED_DRAFT',
+  FACETED_STORED: 'FACETED_STORED',
+  TOKEN_NAME: "FAGlobal",
+  CS_EMAIL: "cs@xgpinco.com",
+  MAIN_TOKEN_SYMBOL: "GP",
+  TOKEN_SYMBOL: {
+    XGP: "XGP"
+  },
+  SIDE_SCAN: "https://sidescan.luniverse.io/chains/1250869430867890611"
+};
+
+export default APP_PROPERTY;

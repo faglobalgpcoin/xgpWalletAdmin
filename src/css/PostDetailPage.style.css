@@ -1,0 +1,26 @@
+.notice .detail,
+.faq .detail{
+  display: flex;
+  justify-content: space-between;
+}
+
+.notice .detail .detail-textarea,
+.faq .detail .detail-textarea {
+  font-size: 14px;
+  width: 100%;
+  margin-right: 15px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  border: none;
+}
+
+.notice .detail .k-button,
+.faq .detail .k-button{
+  color: dimgray;
+}
+
+/*??
+.notice .modify-button::after {
+  background-color: #fff !important;
+}
+*/
